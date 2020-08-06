@@ -18,6 +18,11 @@ source venv/bin/activate
 pip install -r requeriments.txt
 ```
 
+#### Criando banco de dados:
+``` python 
+python manage.py migrate
+```
+
 #### Executando:
 ```python
 python manage.py runserver

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from datetime import datetime, timedelta
 from .constants import BOOK_AVAILABLE, BOOK_BORROWED
 
@@ -17,7 +18,7 @@ class Book(models.Model):
     status = models.CharField(
         "Status", max_length=100, choices=BOOK_STATUS_CHOICE, null=False, blank=False
     )
-    date_reserved = models.DateField("Data reserva", blank=True, null=True)
+    date_reserved = models.DateTimeField("Data reserva", blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -26,6 +27,11 @@ class Book(models.Model):
         self.status = BOOK_BORROWED
         self.date_reserved = datetime.now() + timedelta(days=3)
         self.save()
+
+    def days_of_delay(self):
+        if self.date_reserved:
+            return (self.date_reserved - timezone.now()).days
+        return 0
 
     class Meta:
         db_table = "book"

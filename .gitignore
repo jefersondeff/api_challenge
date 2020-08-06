@@ -209,3 +209,6 @@ dmypy.json
 
 # pycharm settings ignore
 .idea
+
+# pycharm settings ignore
+.vscode

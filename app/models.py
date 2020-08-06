@@ -29,3 +29,15 @@ class Book(models.Model):
 
     class Meta:
         db_table = "book"
+
+
+class Client(models.Model):
+    name = models.CharField("Nome", max_length=100)
+    books = models.ManyToManyField(Book, related_name="books", null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        db_table = "client"
+

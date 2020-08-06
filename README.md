@@ -1,6 +1,4 @@
 ## Excutando projeto localmente:
-#### Manualmente:
-
 ##### Clonando o projeto:
 ```bash
 git clone https://github.com/jefersondeff/api_challenge
@@ -21,6 +19,11 @@ pip install -r requeriments.txt
 #### Criando banco de dados:
 ``` python 
 python manage.py migrate
+```
+
+#### Adicionado dados fake para teste:
+```python
+python manage.py loaddata app/fixture/fake_db.json 
 ```
 
 #### Executando:

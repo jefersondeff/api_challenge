@@ -16,7 +16,7 @@ class Book(models.Model):
     auth = models.CharField("Autor", max_length=100)
     number_page = models.IntegerField("Numero de páginas")
     status = models.CharField(
-        "Status", max_length=100, choices=BOOK_STATUS_CHOICE, null=False, blank=False
+        "Status", max_length=100, choices=BOOK_STATUS_CHOICE, blank=False
     )
     date_reserved = models.DateTimeField("Data reserva", blank=True, null=True)
 

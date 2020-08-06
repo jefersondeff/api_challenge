@@ -1,0 +1,62 @@
+[
+    {
+        "model": "app.book",
+        "pk": 1,
+        "fields": {
+            "title": "Python ebook",
+            "description": "Python ebook descrição",
+            "auth": "Python",
+            "number_page": 30,
+            "status": "Disponível",
+            "date_reserved": "2020-08-09T21:29:28Z"
+        }
+    },
+    {
+        "model": "app.book",
+        "pk": 2,
+        "fields": {
+            "title": "Clean code",
+            "description": "Clean code description",
+            "auth": "Tio Bob",
+            "number_page": 310,
+            "status": "Disponível",
+            "date_reserved": "2020-08-09T21:35:16Z"
+        }
+    },
+    {
+        "model": "app.book",
+        "pk": 3,
+        "fields": {
+            "title": "Arquitetura Limpa",
+            "description": "o Guia do Artesão Para Estrutura e Design de SoftwareO",
+            "auth": "Tio Bob",
+            "number_page": 432,
+            "status": "Disponível",
+            "date_reserved": null
+        }
+    },
+    {
+        "model": "app.client",
+        "pk": 1,
+        "fields": {
+            "name": "Jeferson",
+            "books": []
+        }
+    },
+    {
+        "model": "app.client",
+        "pk": 2,
+        "fields": {
+            "name": "João",
+            "books": []
+        }
+    },
+    {
+        "model": "app.client",
+        "pk": 3,
+        "fields": {
+            "name": "Ana",
+            "books": []
+        }
+    }
+]

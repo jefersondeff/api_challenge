@@ -17,17 +17,17 @@ pip install --upgrade pip
 pip install -r requeriments.txt
 ```
 
-#### Criando banco de dados:
+##### Criando banco de dados:
 ``` python 
 python manage.py migrate
 ```
 
-#### Adicionado dados fake para teste:
+##### Adicionado dados fake para teste:
 ```python
 python manage.py loaddata app/fixture/fake_db.json 
 ```
 
-#### Executando:
+##### Executando:
 ```python
 python manage.py runserver
 ```
